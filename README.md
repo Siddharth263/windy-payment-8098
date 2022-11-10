@@ -1,1 +1,1 @@
-# Mini Banking Application in Java
+# Mini Banking Application
