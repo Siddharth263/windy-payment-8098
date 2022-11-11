@@ -3,8 +3,8 @@ package com.bank.dao;
 import com.bank.exceptions.BankException;
 
 public interface Bank {
-	boolean login() throws BankException;
-	boolean register();
+	void login() throws BankException;
+	void register();
 	/*
 	 * new method ---> 
 	 * showOptions(){

@@ -17,7 +17,7 @@ public class customers {
 	}
 	@Override
 	public String toString() {
-		return "customers [cName=" + cName + ", balance=" + balance + ", password=" + password + "]";
+		return "customers [cName=" + cName +"]";
 	}
 	public String getcName() {
 		return cName;

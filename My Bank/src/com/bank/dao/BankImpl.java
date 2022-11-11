@@ -6,10 +6,11 @@ import com.bank.model.customers;
 
 public class BankImpl implements Bank{
 
-	Scanner sc = new Scanner(System.in);
 	Management m = new ManagementImpl();
+	Scanner sc = new Scanner(System.in);
+	
 	@Override
-	public boolean login() throws BankException {
+	public void login() throws BankException {
 
 		System.out.println("Enter your email: ");
 		String email = sc.next();
@@ -18,16 +19,14 @@ public class BankImpl implements Bank{
 		String password = sc.next();
 		
 		try {
-			customers c = m.authenticate(email, password);
-			System.out.println("Welcome "+c.getcName()+" to K Finances!");
-			return true;
+			m.authenticate(email, password);
 		} catch (BankException e) {
 			throw new BankException("Invalid Credentials, please try again");
 		}
 	}
 
 	@Override
-	public boolean register() {
+	public void register() {
 		System.out.println("Enter your name: ");
 		String name = sc.next();
 		
@@ -44,9 +43,7 @@ public class BankImpl implements Bank{
 		}
 		else {
 			customers c = new customers(name, 0, password, email);
-			if(m.addCustomer(c)) return true;
+			m.addCustomer(c);
 		}
-		return false;
 	}
-
 }
