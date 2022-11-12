@@ -1,14 +1,11 @@
 # Mini Banking Application
 
-Hello Fellas,
+Hello Everyone,
 
-This is a mini banking application that I created using JAVA and MySQL. It is a console based application. This mini application lets a old user log in and a new user sign up. After that the user can check their balance, transfer money to another person, and add money to their account.
+There are a lot of different kind of banking transaction which involve several parties like merchant, receiver, bank, etc. so to handle all those transaction in JAVA, there is a JDBC(JAVA Database Connectivity) which provides us an API to connect, execute, fetch data from any databases. It provides a language JAVA database connectivity standards.  
+Tranactions in JDBC  provides us a feature that considers a complete SQL statements as one unit, then executes once, and if any statement fails, the entire transaction fails.
 
-
-There are a lot of different kind of banking traqnsaction which involve several parties like merchant, receiver, bank, etc. so to handle all thos transaction in JAVA, there is a JDBC(JAVA Database Connectivity) which provides us an API to connect, execute, fetch data from any databases. It provides a language JAVA database connectivity standards.  
-Tranactions in JDBC  provides us a feature that considers a complete SQL statements as one unit, then executes once, and if any statement fails, the entire ttransactions fails.
-
-In this mini application, to handle a transaction we are using JDBC transaction consistent. This Application provides a Menu-Driven Console Interface to a User Using that User can perform functions like create Account, Login, Veiw Balance, and Transfer Money to the other customer.
+In this mini application, to handle a transaction we are using JDBC transaction consistent. This Application provides a Menu-Driven Console Interface to a User, using that User can perform functions like create Account, Login, Veiw Balance, and Transfer Money to the other customer.
 
 # Software Prerequisite:
 
