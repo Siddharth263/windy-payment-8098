@@ -121,8 +121,13 @@ public class ManagementImpl implements Management{
 
 	@Override
 	public void showOption(customers c) {
+		System.out.println();
+		System.out.println("==========================");
 		System.out.println(" 1. show balance\n 2. transfer money\n 3. add money\n 4. exit/log out");
   		int o = sc.nextInt();
+  		System.out.println();
+		System.out.println("==========================");
+		
   		try {
   			switch(o){
   			case 1: checkBalance(c);
@@ -132,12 +137,16 @@ public class ManagementImpl implements Management{
   				String rName = sc.next();
   				System.out.println("Enter amount: ");
   				int amount = sc.nextInt();
+  				System.out.println();
+  				System.out.println("==========================");
   				transferMoney(rName, c, amount);
   				break;
   			}
   			case 3: {
   				System.out.println("Enter the amount: ");
   				int amount = sc.nextInt();
+  				System.out.println();
+  				System.out.println("==========================");
   				addMoney(c, amount);
 				break;
   			}
@@ -145,6 +154,8 @@ public class ManagementImpl implements Management{
   					break;
   			default: {
   				System.out.println("Invalid Input");
+  				System.out.println();
+  				System.out.println("==========================");
   				showOption(c);
   			}
   		}

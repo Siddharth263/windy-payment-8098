@@ -4,7 +4,7 @@ import com.bank.exceptions.BankException;
 
 public interface Bank {
 	void login() throws BankException;
-	void register();
+	boolean register();
 	/*
 	 * new method ---> 
 	 * showOptions(){

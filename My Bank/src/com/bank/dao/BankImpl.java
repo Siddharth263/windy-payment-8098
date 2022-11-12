@@ -18,6 +18,9 @@ public class BankImpl implements Bank{
 		System.out.println("Enter your password: ");
 		String password = sc.next();
 		
+		System.out.println();
+		System.out.println("==========================");
+		
 		try {
 			m.authenticate(email, password);
 		} catch (BankException e) {
@@ -26,7 +29,7 @@ public class BankImpl implements Bank{
 	}
 
 	@Override
-	public void register() {
+	public boolean register() {
 		System.out.println("Enter your name: ");
 		String name = sc.next();
 		
@@ -39,11 +42,17 @@ public class BankImpl implements Bank{
 		String cPassword = sc.next();
 		if(!password.equals(cPassword)) {
 			System.out.println("Passwords don't match please try again!");
+			System.out.println();
+			System.out.println("==========================");
 			register();
 		}
 		else {
 			customers c = new customers(name, 0, password, email);
+			System.out.println();
+			System.out.println("==========================");
 			m.addCustomer(c);
+			return true;
 		}
+		return false;
 	}
 }
